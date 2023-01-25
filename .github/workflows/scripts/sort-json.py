@@ -9,7 +9,7 @@ def main():
     if len(sys.argv) > 1:
         exchanges = (sys.argv[1], )
     else:
-        exchanges = ("binance", "kucoin")
+        exchanges = ("binance")
     for exchange in exchanges:
         for path in REPO_ROOT.joinpath(exchange).rglob("*.json"):
             data = json.loads(path.read_text())
